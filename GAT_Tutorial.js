@@ -20,6 +20,33 @@ function NAVBARDIV() {
 
 };
 
+
+
+function myFunction() {
+    window.onscroll = function() { myFunction() };
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+
+
+function sidenav() {
+    var elem = document.getElementsByClassName("c42")
+    console.log(elem)
+    console.log(elem.length)
+    var x = "",
+        i;
+    for (i = 1; i <= elem.length; i++) {
+        x = x + "<a>Heading" + i + "</a><br>";
+    }
+    document.getElementById("demo").innerHTML = x;
+}
+
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
     /*loop through a collection of all HTML elements:*/
@@ -51,4 +78,3 @@ function includeHTML() {
         }
     }
 };
-RTCCertificate
